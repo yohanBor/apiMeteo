@@ -5,29 +5,43 @@ html {
     background-color: #235292;;
 }
 
-p {
+.searchForm p, #data p {
     font-size : 16px;
     color : white;
 }
 
 #data{
     background : linear-gradient(rgba(119, 119, 119, 0.179), rgba(201, 201, 201, 0.402));
-    width : 60%;
+    width : 80%;
     margin: auto;
     padding : 20px;
     margin-top: 20px;
     height: 100%;
-    display : none;
+    /* display : none; */
     border-radius : 4px;
 }
+
+#data h2 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+}
+
 #condGen{
     text-transform: lowercase;
+    font-weight: bold;
 }
 .searchForm {
     margin : auto;
     margin-top : 20px;
     text-align : center;
-    background-color: rgba(255,255,255,0.3);
+    background-color: #efefef;
     width : 30%;
     padding : 4px;
     border-radius: 20px;
@@ -36,7 +50,11 @@ p {
 .searchForm input, .searchForm button {
     padding : 10px;
 }
-
+.searchForm button {
+background-color: #efefef;
+border : solid rgb(103, 103, 103) 1px;
+border-radius : 2px;
+}
 .searchForm button:hover{
     cursor : pointer;
 }
@@ -75,6 +93,11 @@ p {
     height : 76px;
 }
 
+input[type=range] {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+}
 #temperature p{
     margin-left: 8px;
     font-size: 64px;
@@ -84,7 +107,7 @@ p {
     display: flex;
 }
 
-h2 {
+#cityName h2 {
     color : white;
 }
 #temperature h3{
@@ -118,4 +141,70 @@ h2 {
 .underline{
     text-decoration: underline;
     font-weight : bold;
+}
+
+#forecast {
+    margin-top: 20px;
+    background-color: #1f4161;
+    padding: 10px;
+    border-radius : 4px;
+}
+
+#fctContainer {
+    display : flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+.day {
+    color : white;
+    background: #2c4c6b;
+    width: 20%;
+    padding: 5px;
+    border-radius: 2px;
+    
+}
+
+.day h3{
+    line-height: 10px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.fctInfo {
+    display :flex;
+    direction: ltr;
+    align-items: center;
+}
+
+.fctInfo img {
+    width : 40px;
+    height : 40px;
+}
+.tempCol {
+    display: flex;
+    line-height: 22px;
+    margin-left: 12px;
+    flex-direction: column;
+} 
+.tempCol .top {
+    font-weight: 600;
+}
+
+
+#displayTmp {
+    line-height: 0px;
+    margin-bottom: 6px;
+}
+
+/* MAP */
+#map {
+    display: none; 
+    height: 180px; 
+}
+
+#data {
+    display: none;
 }
